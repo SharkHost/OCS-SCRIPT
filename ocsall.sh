@@ -32,10 +32,11 @@ export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
 
 if [[ -e /etc/debian_version ]]; then
-	#OS=debian
+	#OS=Ubuntu
 	RCLOCAL='/etc/rc.local'
 else
-	echo "คุณไม่ได้เรียกใช้สคริปต์นี้ในระบบปฏิบัติการ Debian"
+	echo "คุณไม่สามารถเรียกใช้สคริปต์นี้ในระบบปฏิบัติการนี้ได้"
+	echo "OS ที่รองรับ Ubuntu 14.04 - 16.04"
 	exit
 fi
 
